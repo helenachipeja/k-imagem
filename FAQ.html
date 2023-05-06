@@ -4,12 +4,19 @@
 <head>
     <meta charset="utf-8">
     <title>FAQ</title>
+   
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+
+        <!-- Inclui o CSS do SweetAlert2 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+
+<!-- Inclui o JavaScript do SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -31,11 +38,11 @@
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-dark" href="">FAQs</a>
+                    <a class="text-dark" href="FAQ.html">FAQs</a>
                     <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Help</a>
+                    <a class="text-dark" href="contact.html">Help</a>
                     <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Support</a>
+                    <a class="text-dark" href="contact.html">Support</a>
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
@@ -67,23 +74,27 @@
             <div class="col-lg-6 col-6 text-left">
                 <form action="">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Pesquise por Servicos">
-                        <div class="input-group-append">
+                        <input type="text" class="form-control" id="search-input" placeholder="Pesquise por Servicos">
+                        <!--<div class="input-group-append">
                             <span class="input-group-text bg-transparent text-primary">
                                 <i class="fa fa-search"></i>
                             </span>
+                        </div>-->
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="search-button">Pesquisar</button>
                         </div>
                     </div>
+                    <div id="search-results"></div>
                 </form>
             </div>
             <div class="col-lg-3 col-6 text-right">
-                <a href="" class="btn border">
-                    <i class="fas fa-heart text-primary"></i>
-                    <span class="badge">0</span>
+                <a href="sigin.html" class="btn border">
+                    <i class="fas fa-hand-holding-heart text-primary"></i>
+                    <span class="badge">Solicitar</span>
                 </a>
-                <a href="" class="btn border">
-                    <i class="fas fa-shopping-cart text-primary"></i>
-                    <span class="badge">0</span>
+                <a href="sigin.html" class="btn border">
+                    <i class="fas fa-sign-in-alt text-primary"></i>
+                    <span class="badge">Login</span>
                 </a>
             </div>
         </div>
@@ -94,60 +105,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid mb-5">
         <div class="row border-top px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
-                    <h6 class="m-0">Categorias</h6>
-                    <i class="fa fa-angle-down text-dark"></i>
-                </a>
-                <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
-                    <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Identidade visual <i class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="servicos.html#cartao" class="dropdown-item">Cartões de visita</a>
-                                <a href="servicos.html#papel" class="dropdown-item">Papel de parede personalizado</a>
-                                <a href="servicos.html#rotulo" class="dropdown-item">Rótulos</a>
-                                <a href="servicos.html#logotipo" class="dropdown-item">Logotipo</a>
-                                <a href="servicos.html#identidade" class="dropdown-item">Identidade corporativa</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Personalização<i class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="servicos.html#branding" class="dropdown-item">Branding de viatura</a>
-                                <a href="servicos.html#flag" class="dropdown-item">Bandeira personalizada</a>
-                                <a href="servicos.html#envelope" class="dropdown-item">Envelope</a>
-                                <a href="servicos.html#casamento" class="dropdown-item">Matrículas de casamento personalizadas</a>
-                                <a href="servicos.html#social" class="dropdown-item">Rede Social</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Comunicação visual<i class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="servicos.html#cartazes" class="dropdown-item">Cartazes</a>
-                                <a href="servicos.html#menu" class="dropdown-item">Menu</a>
-                                <a href="servicos.html#cracha" class="dropdown-item">Cracha</a>
-                                <a href="servicos.html#rotulo" class="dropdown-item">Rótulos</a>
-                                <a href="servicos.html#album" class="dropdown-item">Capa de álbum</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Sinalização<i class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="servicos.html#flag" class="dropdown-item">Bandeira</a>
-                                <a href="servicos.html#tear" class="dropdown-item">Teardrop</a>
-                                <a href="servicos.html#rollup" class="dropdown-item">Roll Up</a>
-                            </div>
-                        </div>
-                        <a href="servicos.html#social#banner" class="nav-item nav-link">    Banner publicitário</a>
-                        <a href="servicos.html#social#banner" class="nav-item nav-link">    Banner corporativo</a>
-                        <a href="servicos.html#social#cartao" class="nav-item nav-link">Cartões de visita</a>
-                        <a href="servicos.html#social#certificado" class="nav-item nav-link">Certificados</a>
-                        <a href="servicos.html#social#sticker" class="nav-item nav-link">Stickers</a>
-                        
-                    </div>
-                </nav>
-            </div>
+           
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                     <a href="" class="text-decoration-none d-block d-lg-none">
@@ -160,137 +118,103 @@
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.html" class="nav-item nav-link active">Inicio</a>
                             <a href="shop.html" class="nav-item nav-link">serviços</a>
-                           <!--<a href="detail.html" class="nav-item nav-link">Shop Detail</a>-->
-                            <!--<div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="cart.html" class="dropdown-item">Shopping Cart</a>
-                                    <a href="checkout.html" class="dropdown-item">Checkout</a>
-                                </div>
-                            </div>-->
+                            <a href="FAQ.html" class="nav-item nav-link">Categorias</a>
                             <a href="FAQ.html" class="nav-item nav-link">FAQ</a>
                             <a href="contact.html" class="nav-item nav-link">Contacto</a>
                         </div>
-                        <div class="navbar-nav ml-auto py-0">
-                            <a href="" class="nav-item nav-link">Login</a>
-                            <a href="" class="nav-item nav-link">Cadastro</a>
-                        </div>
+                    
                     </div>
                 </nav>
-                <div id="header-carousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" style="height: 410px;">
-                            <img class="img-fluid" src="img/slider/slider1.jpg" alt="Image">
-                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div class="p-3" style="max-width: 700px;">
-                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">Promova sua marca com estilo</h4>
-                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Cartões de visita</h3>
-                                    <a href="" class="btn btn-light py-2 px-3">Solicite um orçamento</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item" style="height: 410px;">
-                            <img class="img-fluid" src="img/slider/slider2.png" alt="Image">
-                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div class="p-3" style="max-width: 700px;">
-                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">Transforme seu espaço em um ambiente único</h4>
-                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Banners</h3>
-                                    <a href="" class="btn btn-light py-2 px-3">Solicite um orçamento</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item" style="height: 410px;">
-                            <img class="img-fluid" src="img/slider/slider3.jpg" alt="Image">
-                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div class="p-3" style="max-width: 700px;">
-                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">Transforme seu espaço em um ambiente único</h4>
-                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Papel de Parede</h3>
-                                    <a href="" class="btn btn-light py-2 px-3">Solicite um orçamento</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                            <span class="carousel-control-prev-icon mb-n2"></span>
-                        </div>
-                    </a>
-                    <a class="carousel-control-next" href="#header-carousel" data-slide="next">
-                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                            <span class="carousel-control-next-icon mb-n2"></span>
-                        </div>
-                    </a>
-                </div>
+             
                
         </div>
     </div>
-    <!-- Navbar End -->
+    
 
 
     <!-- Page Header Start -->
     <div class="container-fluid bg-secondary mb-5">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
-            <h1 class="font-weight-semi-bold text-uppercase mb-3">Contacte-nos</h1>
+            <h1 class="font-weight-semi-bold text-uppercase mb-3">Perguntas Frequentes</h1>
             <div class="d-inline-flex">
                 <p class="m-0"><a href="">Inicio</a></p>
                 <p class="m-0 px-2">-</p>
-                <p class="m-0">Contacto</p>
+                <p class="m-0">FAQ</p>
             </div>
         </div>
     </div>
     <!-- Page Header End -->
 
 
-    <!-- Contact Start -->
+    <!-- FAQ Start -->
     <div class="container-fluid pt-5">
         <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Contacto para qualquer dúvida</span></h2>
+            <h2 class="section-title px-5"><span class="px-2">Você pergunta, nós respondemos</span></h2>
         </div>
-        <div class="row px-xl-5">
-            <div class="col-lg-7 mb-5">
-                <div class="contact-form">
-                    <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                        <div class="control-group">
-                            <input type="text" class="form-control" id="name" placeholder="Teu Nome"
-                                required="required" data-validation-required-message="Please enter your name" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="email" class="form-control" id="email" placeholder="Teu Email"
-                                required="required" data-validation-required-message="Please enter your email" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control" id="subject" placeholder="Assunto"
-                                required="required" data-validation-required-message="Por favor escrevam o assunto,nao se esquecam" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <textarea class="form-control" rows="6" id="message" placeholder="Por favor escrevam o assunto,nao se esquecam"
-                                required="required"
-                                data-validation-required-message="Please enter your message"></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Enviar Mensagem</button>
-                        </div>
-                    </form>
+        <div class="container my-5">
+            <h2 class="text-center mb-5">Perguntas Frequentes</h2>
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Como é feito o pagamento dos serviços?
+                    </button>
+                  </h5>
                 </div>
-            </div>
-            <div class="col-lg-5 mb-5">
-                <h5 class="font-weight-semi-bold mb-3">Entre em contato conosco</h5>
-                <p>Entre em contato conosco hoje mesmo para discutir seus projetos e descobrir como podemos ajudá-lo a alcançar seus objetivos de negócios com nossos serviços de design gráfico de alta qualidade. Estamos ansiosos para trabalhar com você!</p>
-                <div class="d-flex flex-column">
-                    <h5 class="font-weight-semi-bold mb-3">K-Imagem</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Rua Anguane, Maputo, Mozambique</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>kimagemdesign@gmail.com</p>
-                    <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+258 84/86 338 3333</p>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Aceitamos pagamentos em dinheiro, cartão de crédito e transferência bancária. Para saber mais sobre nossas opções de pagamento, entre em contato conosco.
+                  </div>
                 </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Qual é o prazo de entrega dos serviços?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    O prazo de entrega dos serviços pode variar dependendo da complexidade do trabalho solicitado. Entre em contato conosco para obter uma estimativa de tempo para o seu projeto.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Vocês fazem entregas?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Não fazemos entregas físicas de nossos serviços, mas podemos enviar arquivos digitais por e-mail ou compartilhamento de arquivos na nuvem.
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
+            <div class=" question-form">
+                <div class="text-center mb-4"><h2>Envie sua pergunta</h2></div>
+            
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="question">Pergunta:</label>
+                <textarea id="question" name="question" rows="4" cols="50" required></textarea><br>
+                <button class="btn btn-lg btn-block btn-faq font-weight-bold my-3 py-3">Enviar</button>
+              </form>
+            </div>
+            
+          </div>
+          
     </div>
-    <!-- Contact End -->
+    <!-- FAQ End -->
 
 
     <!-- Footer Start -->
@@ -379,6 +303,35 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+      
+        document.querySelector('.btn-faq').addEventListener('click', function() {
+          Swal.fire({
+            icon: 'success',
+            title: 'Pergunta enviado!',
+            text: 'Sua pergunta foi enviada com sucesso! Em breve entraremos em contato com você.',
+            background: '#f9fafb',
+            confirmButtonColor: '#005daa'
+          });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const searchResults = document.getElementById('search-results');
+
+        searchButton.addEventListener('click', function() {
+        const query = searchInput.value.trim();
+        if (query === '') {
+            searchResults.textContent = 'Por favor, insira algo para pesquisar.';
+        } else {
+            searchResults.textContent = 'Você pesquisou por: ' + query;
+        }
+    });
+});
+
+
+        </script>
 </body>
 
 </html>
